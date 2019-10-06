@@ -1,0 +1,6 @@
+{
+    "sandboxUrl" : "http://sandbox.continuitylogic.com/",
+    "regressionUrl" : "http://regressiontesting.continuitylogic.com/",
+    "userName": "gopal",
+    "Password": "Admin@123456" 
+}
