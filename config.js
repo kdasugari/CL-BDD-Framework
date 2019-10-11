@@ -10,7 +10,10 @@ exports.config = {
     capabilities: {
       browserName : 'chrome',
       marionette : true,
-      acceptSslCerts : true
+      acceptSslCerts : true,
+      'goog:chromeOptions': {
+        w3c: false
+        }
   },
     SELENIUM_PROMISE_MANAGER: false,
     specs: [
@@ -20,7 +23,7 @@ exports.config = {
     getPageTimeout: 60000,
     allScriptsTimeout: 60000,
     cucumberOpts: {
-      require: './stepDefinitions/steps.js',
+      require: './stepDefinitions/*teps.js',
       tags: '@Demo',
       format: 'json:./report/cucumber_report.json',
       profile: false,
