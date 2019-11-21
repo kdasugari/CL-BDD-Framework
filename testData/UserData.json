@@ -1,6 +1,7 @@
 {
-    "sandboxUrl" : "http://sandbox.continuitylogic.com/",
+    "sandboxUrl"    : "http://sandbox.continuitylogic.com/",
     "regressionUrl" : "http://regressiontesting.continuitylogic.com/",
-    "userName": "gopal",
-    "Password": "Admin@123456" 
+    "betaUrl"       : "http://e2e-beta.continuitylogic.com",
+    "userName"      : "gopal",
+    "Password"      : "Admin@123456"
 }

@@ -29,7 +29,7 @@ let login =  function(){
 
         this.getTitle = async function () {
             return await browser.getTitle(); 
-        }
+        }       
 }
 
 module.exports = new login();

@@ -1,0 +1,6 @@
+{
+    "summaryErr"    : "Your form contains 1 item(s) in need of attention, see details below.",
+    "mandatoryErr"  : "This field is required.",
+    "emailErr"      : "Please enter a valid email address.",
+    "phoneErr"      : "Please enter a valid phone number."
+}

@@ -7,6 +7,7 @@ exports.config = {
     allScriptsTimeout: 500000,
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
+    ignoreUncaughtExceptions: true,
     capabilities: {
       browserName : 'chrome',
       marionette : true,
@@ -23,9 +24,15 @@ exports.config = {
     getPageTimeout: 60000,
     allScriptsTimeout: 60000,
     cucumberOpts: {
-      require: './stepDefinitions/*teps.js',
-      tags: '@Demo',
+      require: './stepDefinitions/*.js',
+        //    require: [
+        //     './stepDefinitions/*.js',
+        //     './support/*.js'
+        // ],
+      tags: [ '@Sanity1', '@Test', '@Demo' ],
+      // tags: '@Test',
       format: 'json:./report/cucumber_report.json',
+      failFast: true,
       profile: false,
       'no-source': true
     },
@@ -38,8 +45,9 @@ exports.config = {
         output: './report/cucumber_report.html',
         reportSuiteAsScenarios: true,
         // scenarioTimestamp: true,
-        storeScreenshots: true,
         launchReport: true,
+        storeScreenshots: true,
+        screenshotsDirectory: 'screenshots/',
         metadata: {
           "App Version": "0.3.2",
           "Test Environment": "BETA",
@@ -49,10 +57,10 @@ exports.config = {
           "Executed": "Remote"
         }
       };
-      reporter.generate(options);
+        reporter.generate(options);
     },
     params: {
-      glob: __dirname,
-      baseURL: 'http://sandbox.continuitylogic.com/',
+        Env : 'regressionsite',
+        glob: __dirname,
   }
 };
